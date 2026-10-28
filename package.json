@@ -1,0 +1,17 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "cy:chrome": "cypress run --browser chrome --headless",
+    "cy:firefox": "cypress run --browser firefox --headless",
+    "cy:edge": "cypress run --browser edge --headless"
+  },
+  "dependencies": {
+    "cypress": "^16.2.0"
+  }
+}
