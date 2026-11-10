@@ -9,9 +9,18 @@
   "scripts": {
     "cy:chrome": "cypress run --browser chrome --headless",
     "cy:firefox": "cypress run --browser firefox --headless",
-    "cy:edge": "cypress run --browser edge --headless"
+    "cy:edge": "cypress run --browser edge --headless",
+    "report:merge": "mochawesome-merge cypress/reports/mochawesome/*.json > cypress/reports/merged.json",
+  "report:html": "marge cypress/reports/merged.json -f report -o cypress/reports/html",
+  "report": "npm run report:merge && npm run report:html"
   },
   "dependencies": {
     "cypress": "^16.2.0"
+  },
+  "devDependencies": {
+    "cypress-multi-reporters": "^2.1.0",
+    "mochawesome": "^8.1.1",
+    "mochawesome-merge": "^5.1.1",
+    "mochawesome-report-generator": "^6.3.2"
   }
 }
